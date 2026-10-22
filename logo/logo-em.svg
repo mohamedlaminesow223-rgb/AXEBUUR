@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640" role="img" aria-label="Logo EM">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#F7F2EC"/>
+      <stop offset="100%" stop-color="#E9DFD4"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fond -->
+  <rect width="640" height="640" fill="url(#bg)"/>
+
+  <!-- Anneau fin -->
+  <circle cx="320" cy="320" r="302" fill="none" stroke="#9C7A55" stroke-width="3"/>
+
+  <!-- Lettres en italique (inclinaison de 14°) -->
+  <g transform="translate(320 320) skewX(-14) translate(-320 -320)">
+    <!-- E doré -->
+    <path fill="#A8894F" d="M120 65 H300 V120 H192 V180 H285 V232 H192 V305 H300 V360 H120 Z"/>
+    <!-- M brun foncé, superposé au E -->
+    <path fill="#2B1714" d="M268 565 V270 H345 L398 400 L451 270 H528 V565 H460 V395 L420 500 H376 L336 395 V565 Z"/>
+  </g>
+</svg>
