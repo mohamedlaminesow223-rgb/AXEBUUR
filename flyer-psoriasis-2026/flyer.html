@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Journée mondiale du psoriasis 2026 – SOSEDEV</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=block" rel="stylesheet">
+<style>
+  :root {
+    --violet: #5B2483;
+    --violet-fonce: #3B1558;
+    --orange: #F28A22;
+    --orange-clair: #FFB45C;
+    --creme: #FFF8F0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1350px; background: #fff; }
+  body { font-family: "Montserrat", sans-serif; overflow: hidden; }
+
+  .flyer { position: relative; width: 1080px; height: 1350px; overflow: hidden;
+    background: radial-gradient(120% 80% at 85% 20%, #7A3AA8 0%, var(--violet) 40%, var(--violet-fonce) 100%); }
+
+  /* Bandeau logo */
+  .entete { position: relative; z-index: 2; height: 200px; background: #fff;
+    display: flex; align-items: center; justify-content: center;
+    border-bottom-right-radius: 120px; }
+  .entete img { height: 128px; }
+
+  /* Décor */
+  .cercle { position: absolute; border-radius: 50%; }
+  .c1 { width: 620px; height: 620px; right: -230px; top: 120px; border: 46px solid rgba(242,138,34,.16); }
+  .c2 { width: 300px; height: 300px; left: -120px; bottom: 170px; background: rgba(255,255,255,.05); }
+  .points { position: absolute; right: 60px; top: 250px; width: 170px; height: 110px;
+    background-image: radial-gradient(rgba(255,255,255,.35) 2.5px, transparent 3px);
+    background-size: 22px 22px; }
+
+  .contenu { position: relative; z-index: 2; padding: 64px 80px 0; color: #fff; }
+
+  .date { display: inline-flex; align-items: center; gap: 14px;
+    background: var(--orange); color: #fff; font-weight: 800; letter-spacing: .06em;
+    font-size: 30px; padding: 14px 30px; border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+  .date small { font-weight: 600; font-size: 22px; opacity: .9; letter-spacing: .04em; }
+
+  h1 { font-family: "Anton", sans-serif; font-weight: 400; text-transform: uppercase;
+    font-size: 112px; line-height: 1.0; margin-top: 34px; letter-spacing: .01em; }
+  h1 span { color: var(--orange-clair); }
+
+  .voeux { margin-top: 34px; font-size: 31px; line-height: 1.42; font-weight: 500; max-width: 860px; }
+  .voeux strong { font-weight: 800; }
+  .voeux .amps { color: var(--orange-clair); font-weight: 700; }
+
+  /* Bloc thème */
+  .theme { position: relative; margin: 52px 80px 0; z-index: 2;
+    background: var(--creme); border-radius: 36px; padding: 44px 56px 44px 60px;
+    box-shadow: 0 24px 60px rgba(20,0,40,.35); }
+  .theme::before { content: ""; position: absolute; left: 0; top: 36px; bottom: 36px; width: 10px;
+    background: var(--orange); border-radius: 0 8px 8px 0; }
+  .etiquette { font-weight: 800; font-size: 22px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); }
+  .slogan { margin-top: 14px; font-weight: 800; font-style: italic; font-size: 52px; line-height: 1.12; color: var(--violet); }
+  .focus { margin-top: 20px; font-size: 23px; line-height: 1.45; color: #4a3a55; font-weight: 500; }
+  .focus b { color: var(--violet); font-weight: 700; }
+  .ruban { position: absolute; right: 48px; top: -104px; width: 96px; filter: drop-shadow(0 10px 18px rgba(0,0,0,.25)); }
+
+  .pied { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; height: 118px;
+    display: flex; align-items: center; justify-content: space-between; padding: 0 80px;
+    color: #fff; border-top: 1px solid rgba(255,255,255,.18); }
+  .pied .soc { font-size: 20px; font-weight: 600; line-height: 1.35; opacity: .92; }
+  .pied .tags { font-size: 20px; font-weight: 700; color: var(--orange-clair); text-align: right; line-height: 1.35; }
+</style>
+</head>
+<body>
+<div class="flyer">
+  <div class="cercle c1"></div>
+  <div class="cercle c2"></div>
+  <div class="points"></div>
+
+  <header class="entete">
+    <img src="logo-sosedev.png" alt="SOSEDEV – Société Sénégalaise de Dermatologie Vénérologie">
+  </header>
+
+  <section class="contenu">
+    <div class="date">JEUDI 29 OCTOBRE 2026</div>
+    <h1>Journée mondiale<br><span>du psoriasis</span></h1>
+    <p class="voeux">
+      La <strong>SOSEDEV</strong> souhaite une excellente Journée mondiale du psoriasis
+      à l’<span class="amps">Association des Malades du Psoriasis du Sénégal (AMPS)</span>,
+      ainsi qu’à tous les patients et à leurs proches.
+    </p>
+  </section>
+
+  <section class="theme">
+    <svg class="ruban" viewBox="0 0 120 170" aria-hidden="true">
+      <path d="M60 12 C82 12 92 34 84 54 L30 160" fill="none" stroke="#7A3AA8" stroke-width="18" stroke-linejoin="round"/>
+      <path d="M60 12 C38 12 28 34 36 54 L90 160" fill="none" stroke="#F28A22" stroke-width="18" stroke-linejoin="round"/>
+    </svg>
+    <div class="etiquette">Thème 2026</div>
+    <p class="slogan">« Non, le psoriasis n’est pas qu’une maladie de peau ! »</p>
+    <p class="focus">
+      Parlons des <b>comorbidités</b> — rhumatisme psoriasique, maladies cardiovasculaires,
+      diabète, retentissement psychologique — et brisons les tabous autour de la maladie.
+    </p>
+  </section>
+
+  <footer class="pied">
+    <div class="soc">Société Sénégalaise de Dermatologie<br>et de Vénéréologie</div>
+    <div class="tags">#JournéeMondialeDuPsoriasis<br>#WorldPsoriasisDay</div>
+  </footer>
+</div>
+</body>
+</html>
