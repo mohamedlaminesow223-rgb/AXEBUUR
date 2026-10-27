@@ -45,3 +45,10 @@ Client d'Axe Buur Design. Ce dossier sert de mémoire du projet : identité, con
 ### Autres (Canva)
 - Invitation « SOSEDEV 2026 – 4e Journée nationale », attestations SOSEDEV 2026
   (dossier Canva « SOSEDEV, invitations »).
+
+## Site du 3e Cours de dermoscopie (2027)
+- Lien : https://claude.ai/artifact/4Czf5uk3TsjoWgQ19a14ct (privé, à partager depuis le menu Partager)
+- Sources : `../site-dermoscopie-2027/` — modifier `site.src.html`, puis `python3 build.py`
+  (génère `index.html` avec les images intégrées) et republier `index.html`.
+- Infos encore « à confirmer » : salle exacte, horaires, programme détaillé, formateurs,
+  ce que comprennent les frais, modalités de paiement, date limite d'inscription.
