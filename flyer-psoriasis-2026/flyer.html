@@ -17,7 +17,7 @@
   body { font-family: "Montserrat", sans-serif; overflow: hidden; }
 
   .flyer { position: relative; width: 1080px; height: 1350px; overflow: hidden;
-    background: radial-gradient(120% 80% at 85% 20%, #7A3AA8 0%, var(--violet) 40%, var(--violet-fonce) 100%); }
+    background: linear-gradient(180deg, var(--violet-fonce) 0%, var(--violet-fonce) 55%, #4A1C6E 100%); }
 
   /* Bandeau logo */
   .entete { position: relative; z-index: 2; height: 200px; background: #fff;
@@ -29,6 +29,12 @@
   .cercle { position: absolute; border-radius: 50%; }
   .c1 { width: 620px; height: 620px; right: -230px; top: 120px; border: 46px solid rgba(242,138,34,.16); }
   .c2 { width: 300px; height: 300px; left: -120px; bottom: 170px; background: rgba(255,255,255,.05); }
+  .photo { position: absolute; z-index: 1; top: 0; right: 0; width: 780px; height: 900px;
+    background: url("photo-psoriasis.jpg") 62% 50% / cover no-repeat; }
+  .photo::after { content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(90deg, var(--violet-fonce) 0%, rgba(75,30,110,.85) 22%, rgba(75,30,110,.35) 55%, rgba(75,30,110,.12) 100%),
+      linear-gradient(180deg, rgba(59,21,88,0) 55%, var(--violet-fonce) 100%); }
   .points { position: absolute; right: 60px; top: 250px; width: 170px; height: 110px;
     background-image: radial-gradient(rgba(255,255,255,.35) 2.5px, transparent 3px);
     background-size: 22px 22px; }
@@ -42,10 +48,12 @@
   .date small { font-weight: 600; font-size: 22px; opacity: .9; letter-spacing: .04em; }
 
   h1 { font-family: "Anton", sans-serif; font-weight: 400; text-transform: uppercase;
-    font-size: 112px; line-height: 1.0; margin-top: 34px; letter-spacing: .01em; }
+    font-size: 112px; line-height: 1.0; margin-top: 34px; letter-spacing: .01em;
+    text-shadow: 0 4px 24px rgba(30,5,50,.55); }
   h1 span { color: var(--orange-clair); }
 
-  .voeux { margin-top: 34px; font-size: 31px; line-height: 1.42; font-weight: 500; max-width: 860px; }
+  .voeux { margin-top: 34px; font-size: 31px; line-height: 1.42; font-weight: 500; max-width: 860px;
+    text-shadow: 0 2px 14px rgba(30,5,50,.6); }
   .voeux strong { font-weight: 800; }
   .voeux .amps { color: var(--orange-clair); font-weight: 700; }
 
@@ -70,9 +78,8 @@
 </head>
 <body>
 <div class="flyer">
-  <div class="cercle c1"></div>
-  <div class="cercle c2"></div>
-  <div class="points"></div>
+    <div class="cercle c2"></div>
+  <div class="photo" role="img" aria-label="Plaques de psoriasis sur une peau noire"></div>
 
   <header class="entete">
     <img src="logo-sosedev.png" alt="SOSEDEV – Société Sénégalaise de Dermatologie Vénérologie">
