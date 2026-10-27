@@ -3,86 +3,81 @@
 <head>
 <meta charset="utf-8">
 <title>Journée mondiale du psoriasis 2026 – SOSEDEV</title>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=block" rel="stylesheet">
 <style>
   :root {
+    --orange: #F47B20;
+    --orange-vif: #FF9A2E;
+    --orange-fonce: #D9500F;
     --violet: #5B2483;
     --violet-fonce: #3B1558;
-    --orange: #F28A22;
-    --orange-clair: #FFB45C;
-    --creme: #FFF8F0;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { width: 1080px; height: 1350px; background: #fff; }
   body { font-family: "Montserrat", sans-serif; overflow: hidden; }
 
   .flyer { position: relative; width: 1080px; height: 1350px; overflow: hidden;
-    background: linear-gradient(180deg, var(--violet-fonce) 0%, var(--violet-fonce) 55%, #4A1C6E 100%); }
+    background: linear-gradient(160deg, var(--orange-vif) 0%, var(--orange) 45%, var(--orange-fonce) 100%); }
 
   /* Bandeau logo */
-  .entete { position: relative; z-index: 2; height: 200px; background: #fff;
+  .entete { position: relative; z-index: 3; height: 170px; background: #fff;
     display: flex; align-items: center; justify-content: center;
-    border-bottom-right-radius: 120px; }
-  .entete img { height: 150px; }
+    border-bottom-left-radius: 110px; border-bottom-right-radius: 110px; }
+  .entete img { height: 132px; }
 
-  /* Décor */
-  .cercle { position: absolute; border-radius: 50%; }
-  .c1 { width: 620px; height: 620px; right: -230px; top: 120px; border: 46px solid rgba(242,138,34,.16); }
-  .c2 { width: 300px; height: 300px; left: -120px; bottom: 170px; background: rgba(255,255,255,.05); }
-  .photo { position: absolute; z-index: 1; top: 0; right: 0; width: 780px; height: 900px;
-    background: url("photo-psoriasis.jpg") 62% 50% / cover no-repeat; }
-  .photo::after { content: ""; position: absolute; inset: 0;
-    background:
-      linear-gradient(90deg, var(--violet-fonce) 0%, rgba(75,30,110,.85) 22%, rgba(75,30,110,.35) 55%, rgba(75,30,110,.12) 100%),
-      linear-gradient(180deg, rgba(59,21,88,0) 55%, var(--violet-fonce) 100%); }
-  .points { position: absolute; right: 60px; top: 250px; width: 170px; height: 110px;
-    background-image: radial-gradient(rgba(255,255,255,.35) 2.5px, transparent 3px);
-    background-size: 22px 22px; }
+  /* Photo de plaques, discrète, à droite du titre */
+  .photo { position: absolute; z-index: 1; top: 0; right: 0; width: 720px; height: 760px;
+    background: url("photo-psoriasis.jpg") 65% 40% / cover no-repeat;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 78% 38%, #000 35%, transparent 100%);
+            mask-image: radial-gradient(ellipse 70% 60% at 78% 38%, #000 35%, transparent 100%); }
+  .photo::after { content: ""; position: absolute; inset: 0; background: rgba(244,123,32,.38); }
 
-  .contenu { position: relative; z-index: 2; padding: 64px 80px 0; color: #fff; }
+  .contenu { position: relative; z-index: 2; padding: 38px 70px 0; color: #fff; }
 
-  .date { display: inline-flex; align-items: center; gap: 14px;
-    background: var(--orange); color: #fff; font-weight: 800; letter-spacing: .06em;
-    font-size: 30px; padding: 14px 30px; border-radius: 999px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.18); }
-  .date small { font-weight: 600; font-size: 22px; opacity: .9; letter-spacing: .04em; }
+  .date { display: inline-block; background: var(--violet); color: #fff; font-weight: 800;
+    letter-spacing: .06em; font-size: 28px; padding: 12px 28px; border-radius: 999px;
+    box-shadow: 0 10px 26px rgba(80,20,0,.25); }
 
   h1 { font-family: "Anton", sans-serif; font-weight: 400; text-transform: uppercase;
-    font-size: 112px; line-height: 1.0; margin-top: 34px; letter-spacing: .01em;
-    text-shadow: 0 4px 24px rgba(30,5,50,.55); }
-  h1 span { color: var(--orange-clair); }
+    font-size: 100px; line-height: 1.0; margin-top: 26px; letter-spacing: .01em;
+    text-shadow: 0 4px 22px rgba(120,40,0,.35); }
+  h1 span { color: var(--violet-fonce); text-shadow: none; }
 
-  .voeux { margin-top: 34px; font-size: 31px; line-height: 1.42; font-weight: 500; max-width: 860px;
-    text-shadow: 0 2px 14px rgba(30,5,50,.6); }
+  .voeux { margin-top: 22px; font-size: 26px; line-height: 1.42; font-weight: 500; max-width: 900px;
+    text-shadow: 0 2px 10px rgba(120,40,0,.3); }
   .voeux strong { font-weight: 800; }
-  .voeux .amps { color: var(--orange-clair); font-weight: 700; }
+  .voeux .amps { font-weight: 800; color: var(--violet-fonce); text-shadow: none; }
+
+  /* Images de dermoscopie */
+  .dermo { position: relative; z-index: 2; margin-top: 34px; display: flex; justify-content: center; gap: 34px; }
+  .rond { width: 292px; height: 292px; border-radius: 50%; padding: 9px;
+    background: #fff; box-shadow: 0 18px 40px rgba(90,25,0,.35), 0 0 0 6px rgba(255,255,255,.25); }
+  .rond img { width: 100%; height: 100%; border-radius: 50%; display: block; }
+  .legende { position: relative; z-index: 2; text-align: center; color: #fff; margin-top: 18px;
+    font-size: 20px; font-weight: 600; letter-spacing: .02em; }
+  .legende b { font-weight: 800; text-transform: uppercase; letter-spacing: .12em; margin-right: 8px; }
 
   /* Bloc thème */
-  .theme { position: relative; margin: 52px 80px 0; z-index: 2;
-    background: var(--creme); border-radius: 36px; padding: 44px 56px 44px 60px;
-    box-shadow: 0 24px 60px rgba(20,0,40,.35); }
-  .theme::before { content: ""; position: absolute; left: 0; top: 36px; bottom: 36px; width: 10px;
-    background: var(--orange); border-radius: 0 8px 8px 0; }
-  .etiquette { font-weight: 800; font-size: 22px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); }
-  .slogan { margin-top: 14px; font-weight: 800; font-style: italic; font-size: 52px; line-height: 1.12; color: var(--violet); }
-  .focus { margin-top: 20px; font-size: 23px; line-height: 1.45; color: #4a3a55; font-weight: 500; }
-  .focus b { color: var(--violet); font-weight: 700; }
-  .ruban { position: absolute; right: 48px; top: -104px; width: 96px; filter: drop-shadow(0 10px 18px rgba(0,0,0,.25)); }
+  .theme { position: relative; z-index: 2; margin: 26px 70px 0;
+    background: var(--violet); border-radius: 30px; padding: 26px 40px 28px;
+    box-shadow: 0 20px 46px rgba(60,10,40,.35); color: #fff; }
+  .etiquette { font-weight: 800; font-size: 19px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange-vif); }
+  .slogan { margin-top: 8px; font-weight: 800; font-style: italic; font-size: 41px; line-height: 1.14; }
+  .focus { margin-top: 10px; font-size: 19px; line-height: 1.4; font-weight: 500; opacity: .92; }
 
-  .pied { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; height: 118px;
-    display: flex; align-items: center; justify-content: space-between; padding: 0 80px;
-    color: #fff; border-top: 1px solid rgba(255,255,255,.18); }
-  .pied .soc { font-size: 20px; font-weight: 600; line-height: 1.35; opacity: .92; }
-  .pied .tags { font-size: 20px; font-weight: 700; color: var(--orange-clair); text-align: right; line-height: 1.35; }
+  .pied { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; height: 86px;
+    display: flex; align-items: center; justify-content: space-between; padding: 0 70px;
+    background: var(--violet-fonce); color: #fff; }
+  .pied .soc { font-size: 18px; font-weight: 600; line-height: 1.3; }
+  .pied .tags { font-size: 18px; font-weight: 700; color: var(--orange-vif); text-align: right; line-height: 1.3; }
 </style>
 </head>
 <body>
 <div class="flyer">
-    <div class="cercle c2"></div>
   <div class="photo" role="img" aria-label="Plaques de psoriasis sur une peau noire"></div>
 
   <header class="entete">
-    <img src="logo-sosedev.png" alt="SOSEDEV – Société Sénégalaise de Dermatologie Vénérologie">
+    <img src="logo-sosedev.png" alt="SOSEDEV – Société Sénégalaise de Dermatologie Vénéréologie">
   </header>
 
   <section class="contenu">
@@ -95,17 +90,17 @@
     </p>
   </section>
 
+  <section class="dermo" aria-label="Images de dermoscopie du psoriasis">
+    <div class="rond"><img src="dermo-1.png" alt="Dermoscopie : psoriasis du cuir chevelu, squames blanches"></div>
+    <div class="rond"><img src="dermo-2.png" alt="Dermoscopie : vaisseaux ponctués sur fond rouge"></div>
+    <div class="rond"><img src="dermo-3.png" alt="Dermoscopie : vaisseaux ponctués et squames blanches"></div>
+  </section>
+  <p class="legende"><b>Dermoscopie</b>vaisseaux ponctués sur fond rouge et squames blanches</p>
+
   <section class="theme">
-    <svg class="ruban" viewBox="0 0 120 170" aria-hidden="true">
-      <path d="M60 12 C82 12 92 34 84 54 L30 160" fill="none" stroke="#7A3AA8" stroke-width="18" stroke-linejoin="round"/>
-      <path d="M60 12 C38 12 28 34 36 54 L90 160" fill="none" stroke="#F28A22" stroke-width="18" stroke-linejoin="round"/>
-    </svg>
     <div class="etiquette">Thème 2026</div>
     <p class="slogan">« Non, le psoriasis n’est pas qu’une maladie de peau ! »</p>
-    <p class="focus">
-      Parlons des <b>comorbidités</b> — rhumatisme psoriasique, maladies cardiovasculaires,
-      diabète, retentissement psychologique — et brisons les tabous autour de la maladie.
-    </p>
+    <p class="focus">Rhumatisme psoriasique, maladies cardiovasculaires, diabète, retentissement psychologique : parlons des comorbidités et brisons les tabous.</p>
   </section>
 
   <footer class="pied">
