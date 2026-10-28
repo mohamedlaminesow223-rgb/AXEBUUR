@@ -20,10 +20,10 @@
     background: linear-gradient(160deg, var(--orange-vif) 0%, var(--orange) 45%, var(--orange-fonce) 100%); }
 
   /* Bandeau logo */
-  .entete { position: relative; z-index: 3; height: 170px; background: #fff;
-    display: flex; align-items: center; justify-content: center;
-    border-bottom-left-radius: 110px; border-bottom-right-radius: 110px; }
-  .entete img { height: 132px; }
+  .entete { position: relative; z-index: 3; padding-top: 20px; display: flex; justify-content: center; }
+  .entete .cadre { background: #fff; border-radius: 40px; padding: 10px 40px;
+    box-shadow: 0 12px 30px rgba(80,20,0,.25); display: flex; }
+  .entete img { height: 106px; display: block; }
 
   /* Photo de plaques, discrète, à droite du titre */
   .photo { position: absolute; z-index: 1; top: 0; right: 0; width: 720px; height: 760px;
@@ -32,25 +32,25 @@
             mask-image: radial-gradient(ellipse 70% 60% at 78% 38%, #000 35%, transparent 100%); }
   .photo::after { content: ""; position: absolute; inset: 0; background: rgba(244,123,32,.38); }
 
-  .contenu { position: relative; z-index: 2; padding: 38px 70px 0; color: #fff; }
+  .contenu { position: relative; z-index: 2; padding: 22px 50px 0; color: #fff; text-align: center; }
 
   .date { display: inline-block; background: var(--violet); color: #fff; font-weight: 800;
     letter-spacing: .06em; font-size: 28px; padding: 12px 28px; border-radius: 999px;
     box-shadow: 0 10px 26px rgba(80,20,0,.25); }
 
   h1 { font-family: "Anton", sans-serif; font-weight: 400; text-transform: uppercase;
-    font-size: 100px; line-height: 1.0; margin-top: 26px; letter-spacing: .01em;
+    font-size: 118px; line-height: 1.0; margin-top: 22px; letter-spacing: .01em;
     text-shadow: 0 4px 22px rgba(120,40,0,.35); }
   h1 span { color: var(--violet-fonce); text-shadow: none; }
 
-  .voeux { margin-top: 22px; font-size: 26px; line-height: 1.42; font-weight: 500; max-width: 900px;
+  .voeux { margin: 16px auto 0; font-size: 29px; line-height: 1.38; font-weight: 500; max-width: 980px;
     text-shadow: 0 2px 10px rgba(120,40,0,.3); }
   .voeux strong { font-weight: 800; }
   .voeux .amps { font-weight: 800; color: var(--violet-fonce); text-shadow: none; }
 
   /* Images de dermoscopie */
   .dermo { position: relative; z-index: 2; margin-top: 34px; display: flex; justify-content: center; gap: 34px; }
-  .rond { width: 292px; height: 292px; border-radius: 50%; padding: 9px;
+  .rond { width: 282px; height: 282px; border-radius: 50%; padding: 9px;
     background: #fff; box-shadow: 0 18px 40px rgba(90,25,0,.35), 0 0 0 6px rgba(255,255,255,.25); }
   .rond img { width: 100%; height: 100%; border-radius: 50%; display: block; }
   .legende { position: relative; z-index: 2; text-align: center; color: #fff; margin-top: 18px;
@@ -58,11 +58,11 @@
   .legende b { font-weight: 800; text-transform: uppercase; letter-spacing: .12em; margin-right: 8px; }
 
   /* Bloc thème */
-  .theme { position: relative; z-index: 2; margin: 50px 70px 0;
-    background: var(--violet); border-radius: 30px; padding: 26px 40px 28px;
+  .theme { position: relative; z-index: 2; margin: 46px 70px 0;
+    background: var(--violet); border-radius: 30px; padding: 22px 40px 24px;
     box-shadow: 0 20px 46px rgba(60,10,40,.35); color: #fff; }
   .etiquette { font-weight: 800; font-size: 19px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange-vif); }
-  .slogan { margin-top: 8px; font-weight: 800; font-style: italic; font-size: 41px; line-height: 1.14; }
+  .slogan { margin-top: 6px; font-weight: 800; font-style: italic; font-size: 39px; line-height: 1.14; }
   .focus { margin-top: 10px; font-size: 19px; line-height: 1.4; font-weight: 500; opacity: .92; }
 
   .pied { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; height: 86px;
@@ -77,7 +77,7 @@
   <div class="photo" role="img" aria-label="Plaques de psoriasis sur une peau noire"></div>
 
   <header class="entete">
-    <img src="logo-sosedev.png" alt="SOSEDEV – Société Sénégalaise de Dermatologie Vénéréologie">
+    <div class="cadre"><img src="logo-sosedev.png" alt="SOSEDEV – Société Sénégalaise de Dermatologie Vénéréologie"></div>
   </header>
 
   <section class="contenu">
